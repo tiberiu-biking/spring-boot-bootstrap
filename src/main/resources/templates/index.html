@@ -41,5 +41,24 @@
     </div>
 </nav>
 
+<div class="panel panel-default">
+    <div class="panel-heading" th:text="${title}"></div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="sb : ${messages}">
+            <td th:text="${sb.text}"/>
+            <td th:text="${sb.description}"/>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
 </body>
 </html>
